@@ -1,0 +1,58 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/CerealBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/kitchen/breakfast/protos/BiscuitBox.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.23905422042917499 -0.8275949874273315 -0.5078775605204016 4.326745296916547
+  position 0.4368599846178219 -0.24376129796453277 1.3144106865320861
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+E-puck {
+  hidden position_0_0 13869.838085063118
+  hidden position_0_1 13319.659264478429
+  hidden rotation_1 0 -1 0 3.435073189408599
+  hidden rotation_2 0 -1 0 0.6935867422946635
+  translation 0.0319397 0.014598 -6.83684e-05
+  rotation 0.022835368035968615 -0.9997243314782276 0.0054595803019236 0.004192262991289525
+  controller "lidar"
+  groundSensorsSlot [
+    InertialUnit {
+      name "imu"
+    }
+    Lidar {
+    }
+    GPS {
+    }
+  ]
+}
+CerealBox {
+  hidden linearVelocity_0 3.921871895848671e-06 5.744392290781246e-07 1.9032313553849137e-11
+  hidden angularVelocity_0 -3.598734490914385e-09 -1.531055982406247e-09 -9.65708812290925e-06
+  translation 0.17529414144686545 0.29703005629965634 -0.0003924110813244286
+  rotation -1.6589581078946523e-05 5.829655203995379e-05 -0.9999999981631489 1.3104425778727227
+}
+BiscuitBox {
+  hidden linearVelocity_0 -2.1355119439343863e-17 1.527365427497375e-17 -7.106426882286687e-17
+  hidden angularVelocity_0 7.898507741948162e-16 -1.159407015075301e-16 7.99202832207054e-17
+  translation -0.3473754799338007 0.06281174121508779 -0.00015696000000001153
+  rotation 4.3932324356285317e-17 9.466100625487502e-17 -1 0.7849945436407489
+}
+BiscuitBox {
+  hidden linearVelocity_0 -4.293367450437887e-18 -3.132543979799337e-17 -3.5527137786859265e-17
+  hidden angularVelocity_0 -7.431620360999692e-16 4.0287112272067296e-16 -3.752153378209414e-17
+  translation 0.24053399999958985 -0.31048799999989385 -0.000156960000000015
+  rotation -5.922119922022312e-17 4.82388388986054e-17 1 1.3174758154069226
+  name "biscuit box(1)"
+}
