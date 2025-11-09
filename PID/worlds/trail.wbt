@@ -1,0 +1,74 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+IMPORTABLE EXTERNPROTO "../protos/TrackOne.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.385105098309938 0.2603569838794788 -0.885385963408543 1.3145635805919371
+  position -1.3433803190684603 1.1693000320391471 0.9841742070679425
+}
+TexturedBackground {
+  texture "empty_office"
+  luminosity 0
+}
+TexturedBackgroundLight {
+  texture "empty_office"
+  luminosity 50
+  castShadows FALSE
+}
+RectangleArena {
+  floorSize 3 2
+  floorAppearance PBRAppearance {
+    roughness 1
+    metalness 0
+  }
+  wallHeight 0.01
+  wallAppearance PBRAppearance {
+    roughness 1
+    metalness 0
+  }
+}
+E-puck {
+  hidden position_0_0 109.74609245996392
+  hidden position_0_1 110.66023834981797
+  hidden rotation_1 0 1 0 1.240804694241767
+  hidden rotation_2 0 -1 0 4.520171424878375
+  translation -0.614631 -0.333639 -0.000187456
+  rotation -0.0006312042855074262 -0.00216724098029023 -0.9999974523205963 -0.48038530717958583
+  controller "magia"
+  groundSensorsSlot [
+    DistanceSensor {
+      translation 0 -0.02 0
+      name "IR1"
+      type "infra-red"
+    }
+    DistanceSensor {
+      translation 0 0.02 0
+      name "IR0"
+      type "infra-red"
+    }
+  ]
+}
+Transform {
+  translation 4.16023 -4.48284 0
+  scale 0.06 0.06 0.06
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Mesh {
+        url [
+          "../../../../../henry/Descargas/tinker.obj"
+        ]
+      }
+    }
+  ]
+}
