@@ -1,0 +1,137 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.529725734101204 0.006291505512952085 0.8481456617759245 2.9929731366041907
+  position -0.18007290341252088 -0.08017482888960878 0.35805054607618186
+}
+DEF E-puck E-puck {
+  hidden position_0_0 2970.6735257413607
+  hidden position_0_1 2894.392631041926
+  hidden rotation_1 0 1 0 5.010060752595846
+  hidden rotation_2 0 0.9999999999999999 0 4.127389739316272
+  translation -0.416977 -0.09 -0.000179129
+  rotation 0.00015157303117779955 0.999999981575368 -0.00011779167973006393 0.0015971104429324905
+  controller "dqn_controller"
+  supervisor TRUE
+  turretSlot [
+    GPS {
+    }
+  ]
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 0 0.33 0
+  floorAppearance PBRAppearance {
+    roughness 1
+    metalness 0
+  }
+  wallThickness 0.1
+  wallHeight 0.01
+  wallAppearance PBRAppearance {
+    baseColor 1 0 0
+    roughness 1
+    metalness 0
+  }
+}
+Solid {
+  translation 0.86 0.51 0.05
+  children [
+    Transform {
+      scale 7 1 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.1 0.1
+          }
+        }
+      ]
+    }
+  ]
+  name "wall01"
+  boundingObject Box {
+    size 0.7 0.1 0.1
+  }
+}
+Solid {
+  translation -0.89 0.16 0.05
+  children [
+    Transform {
+      scale 7 1 1
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 0 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.1 0.1
+          }
+        }
+      ]
+    }
+  ]
+  name "wall02"
+  boundingObject Shape {
+    geometry Box {
+      size 0.7 0.1 0.1
+    }
+  }
+}
+DEF start Solid {
+  translation -0.42 -0.09 0
+  children [
+    Transform {
+      scale 1 1 0.01
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 1 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.1 0.1
+          }
+        }
+      ]
+    }
+  ]
+  name "start"
+}
+DEF end Solid {
+  translation 0.38 0.73 0
+  children [
+    Transform {
+      scale 1 1 0.01
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.333333 1 0
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.1 0.1 0.1
+          }
+        }
+      ]
+    }
+  ]
+  name "end"
+}
