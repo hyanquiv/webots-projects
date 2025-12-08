@@ -7,7 +7,7 @@ centralWidgetVisible: 1
 projectionMode: PERSPECTIVE
 renderingMode: PLAIN
 orthographicViewHeight: 1.20959
-textFiles: 0 "controllers/dqn_controller/dqn_controller.py"
+textFiles: 0 "../DQN/controllers/dqn_controller/dqn_controller.py"
 globalOptionalRendering: DistanceSensorRays
 consoles: Console:All:All
 renderingDevicePerspectives: e-puck:camera;1;1;0;0
